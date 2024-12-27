@@ -1,11 +1,11 @@
 <script setup>
+import Sliderr from './components/Sliderr.vue';
+
 </script>
 
 <template>
   <div>
-    <h1>這是水彩網站測試</h1>
-    <h1>這是 1227 今天推送的第二行</h1>
-    <h1>這是 1227 推送的第三行</h1>
+    <Sliderr />
   </div>
   
 </template>

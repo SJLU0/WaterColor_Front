@@ -1,6 +1,6 @@
 <!-- 看情況要不要加小點點控制圖片 -->
 <template>
-  <h1>這是輪播圖</h1>
+  <h2>這是輪播圖</h2>
   <div class="slider">
     <button class="left-btn" @click="toLeft">◀</button>
     <div class="imgs">

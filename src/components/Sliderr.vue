@@ -82,6 +82,10 @@ button {
   color: rgba(100, 100, 100, 0.7);
   z-index: 1; /* 確保按鈕在圖片上方，不受圖片的透明度過渡影響 */
 }
+
+button:hover{
+  background-color: rgba(230, 230, 230, 0.5);
+}
 .left-btn {
   position: absolute; /* 讓按鈕絕對定位 */
   left: 0;

@@ -20,9 +20,9 @@ import { ref } from "vue";
 
 // 用陣列裝輪播圖url
 const imgUrls = [
-  "https://im1.book.com.tw/image/getImage?i=https://addons.books.com.tw/G/ADbanner/2024/youth/b4_1213_1804x720.png&v=6757d90dk&w=902&h=360",
-  "https://im1.book.com.tw/image/getImage?i=https://addons.books.com.tw/G/ADbanner/fashion/muji/2024/MUJI_1227-1228_902360.jpg&v=67624be2k&w=902&h=360",
-  "https://im1.book.com.tw/image/getImage?i=https://addons.books.com.tw/G/ADbanner/2024/youth/b4_1219_1804x720.png&v=67612e2ak&w=902&h=360",
+  "https://www.eslitecorp.com/eslite_resource/leap_do/scope_pic/1556253316675/01-04-10%E8%AA%A0%E5%93%81%E8%87%AA%E7%87%9F%E5%93%81%E7%89%8C1.jpg",
+  "https://www.eslitecorp.com/eslite_resource/leap_do/scope_pic/1611659709170/%E8%AA%A0%E5%93%81%E7%94%9F%E6%B4%BBbanner_1440x587.jpg",
+  "https://www.eslitecorp.com/eslite_resource/leap_do/scope_pic/1611913447751/%E7%B6%93%E7%87%9F%E5%85%A7%E5%AE%B9_%E8%AA%A0%E5%93%81%E7%B7%9A%E4%B8%8Abanner(1920x1073).jpg",
 ];
 
 // 用ref響應式函數指定一開始索引為0
@@ -33,19 +33,19 @@ const opacityValue = ref(1);
 
 // click事件觸發 function toRight、toLeft，控制索引值
 const toRight = () => {
-  opacityValue.value = 0; // 先將 opacity 設為 0，開始過渡
+  opacityValue.value = 0.3; // 先將 opacity 設為 0.3，開始過渡
   setTimeout(() => {
     imgIndex.value = (imgIndex.value + 1 ) % imgUrls.length; // 更新圖片
     opacityValue.value = 1; // 更新圖片後將 opacity 設回 1
-  }, 300); // 等待過渡完成
+  }, 500); // 等待過渡完成
 };
 
 const toLeft = () => {
-  opacityValue.value = 0; // 先將 opacity 設為 0，開始過渡
+  opacityValue.value = 0.3; // 先將 opacity 設為 0.3，開始過渡
   setTimeout(() => {
     imgIndex.value = (imgIndex.value - 1 + imgUrls.length) % imgUrls.length; // 防止負數，循環顯示上一張圖片
     opacityValue.value = 1; // 更新圖片後將 opacity 設回 1
-  }, 300); // 等待過渡完成
+  }, 500); // 等待過渡完成
 };
 </script>
 
@@ -62,6 +62,7 @@ const toLeft = () => {
 .imgs {
   height: 400px;
   width: 1000px;
+  background-color:  rgba(200, 200, 200, 0.3);
 
 }
 
@@ -70,7 +71,7 @@ const toLeft = () => {
   height: 100%;
   object-fit: cover; /* 讓圖片填滿父容器設置 */
   border-radius: 3px;
-  transition: opacity 0.3s ease-in-out; /* 加上淡入淡出過渡效果 */
+  transition: opacity 0.5s ease-in-out; /* 加上淡入淡出過渡效果 */
 }
 
 button {

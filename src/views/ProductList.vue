@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>產品列表 ProductList</h1>
+    <h1 class = "h1text">產品列表 ProductList</h1>
     <div class="product-list">
       <!-- 使用 v-for 渲染所有產品 -->
       <ProductCard
         v-for="product in products"
         :key="product.productId"
         :product="product"
-        :showCategory="false" 
+        :showImg2="false" 
       />
     </div>
   </div>
@@ -30,11 +30,18 @@ onMounted(fetchProducts);
 </script>
 
 <style scoped>
+.h1text{
+  text-align: center; /* 水平居中 */
+  margin: 30px 0; /* 去掉默認的外邊距 */
+
+}
 .product-list {
   display: flex;
   flex-direction: row;
-  margin: 50px 100px ;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 100px;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
 }
 </style>

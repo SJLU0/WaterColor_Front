@@ -1,6 +1,6 @@
 <template>
-  <div v-if="product">
-    <ProductCard :product="product" :showCategory="true" />
+  <div v-if="product" class="product-detail">
+    <ProductCard :product="product" :showImg2="true" />
   </div>
   <div v-else>
     <p>正在加載...</p>
@@ -28,5 +28,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.product-detail{
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  align-items: center; 
+
+}
 
 </style>

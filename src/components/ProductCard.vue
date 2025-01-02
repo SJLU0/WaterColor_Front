@@ -19,7 +19,6 @@ import { useRouter } from "vue-router";
 const props = defineProps({
   product: Object, // 接收單個產品資料
   showImg2: {
-    // 可選擇是否顯示第二張圖片
     type: Boolean,
     default: false,// 默認不顯示
   },

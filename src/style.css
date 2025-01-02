@@ -1,3 +1,12 @@
+/* 在 style.css 中引入繁體中文思源宋體 */
+@import url('https://fonts.googleapis.com/css2?family=Source+Han+Serif+TC&display=swap');
+
+/* 設置全域字型 */
+body {
+  font-family: 'Source Han Serif TC', sans-serif;
+}
+
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

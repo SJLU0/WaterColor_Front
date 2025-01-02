@@ -5,7 +5,7 @@
 
 <template>
   <div>
-    <Sliderr />
+    <router-view />
   </div>
   
 </template>

@@ -36,7 +36,7 @@ const toRight = () => {
   setTimeout(() => {
     imgIndex.value = (imgIndex.value + 1 ) % imgUrls.length; // 更新圖片
     opacityValue.value = 1; // 更新圖片後將 opacity 設回 1
-  }, 500); // 等待過渡完成
+  }, 700); // 等待過渡完成
 };
 
 const toLeft = () => {
@@ -44,7 +44,7 @@ const toLeft = () => {
   setTimeout(() => {
     imgIndex.value = (imgIndex.value - 1 + imgUrls.length) % imgUrls.length; // 防止負數，循環顯示上一張圖片
     opacityValue.value = 1; // 更新圖片後將 opacity 設回 1
-  }, 500); // 等待過渡完成
+  }, 700); // 等待過渡完成
 };
 </script>
 
